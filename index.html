@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+
+    <title>Frontend Mentor | Product list with cart</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader-container" style="display: none">
+      <div class="loader"></div>
+    </div>
+    <main>
+      <div class="modal-backdrop">
+        <div id="modal">
+          <img
+            src="./assets/images/icon-order-confirmed.svg"
+            alt="logo order confirmed"
+          />
+          <h2>Order Confirmed</h2>
+          <p>We hope you enjoy your food!</p>
+          <div class="modal-container">
+            <div class="modal-product-container"></div>
+
+            <div class="total-order">
+              <p>Order Total</p>
+              <span></span>
+            </div>
+          </div>
+
+          <button class="new-order">Start New Order</button>
+        </div>
+      </div>
+      <template id="dessert-template">
+        <article class="dessert-card">
+          <div class="img-container">
+            <picture>
+              <source class="desktop" media="(min-width: 991px)" srcset="" />
+              <source class="tablet" media="(min-width: 600px)" srcset="" />
+              <img src="" alt="" class="product-image" />
+            </picture>
+            <div class="product-actions">
+              <button class="add">Add to Cart</button>
+              <div class="quantity-controls" style="display: none">
+                <button class="btn-decrement"></button>
+                <span class="quantity">1</span>
+                <button class="btn-increment"></button>
+              </div>
+            </div>
+          </div>
+          <div class="card-data">
+            <p class="name"></p>
+            <p class="title"></p>
+            <p class="price"></p>
+          </div>
+        </article>
+      </template>
+      <section class="dessert-section">
+        <h1>Desserts</h1>
+        <div class="dessert-container"></div>
+      </section>
+      <section class="cart-section">
+        <article class="cart">
+          <h2>Your Cart (<span class="items-quantity">0</span>)</h2>
+          <div class="info">
+            <img
+              src="./assets/images/illustration-empty-cart.svg"
+              alt="logo empty cart"
+            />
+            <p class="no-items">Your added items will appear here</p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!--Desserts Waffle with Berries Waffle 6.50 Add to Cart Vanilla Bean Crème
+    Brûlée Crème Brûlée 7.00 Add to Cart Macaron Mix of Five Macaron 8.00 Add to
+    Cart Classic Tiramisu Tiramisu 5.50 Add to Cart Pistachio Baklava Baklava
+    4.00 Add to Cart Lemon Meringue Pie Pie 5.00 Add to Cart Red Velvet Cake
+    Cake 4.50 Add to Cart Salted Caramel Brownie Brownie 4.50 Add to Cart
+    Vanilla Panna Cotta Panna Cotta 6.50 Add to Cart Your Cart ( Quantity )
+    Your added items will appear here-->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
