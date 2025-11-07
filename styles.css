@@ -455,6 +455,17 @@ body.no-scroll {
   margin-top: 32px;
 }
 
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  background-color: black;
+  padding: 12px;
+  color: var(--rose-300);
+}
+.attribution a {
+  color: var(--rose-50);
+}
+
 @media screen and (min-width: 600px) {
   main .dessert-section .dessert-container {
     display: grid;

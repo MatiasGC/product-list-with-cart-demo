@@ -5,6 +5,7 @@ const CART_SECTION = document.querySelector(".cart-section");
 const LOADER = document.querySelector(".loader-container");
 const CART_INFO = document.querySelector(".cart .info");
 const ITEMS_QUANTITY_SPAN = document.querySelector(".items-quantity");
+const ATTRIBUTION = document.querySelector(".attribution");
 let cart = [];
 
 // Persistance helpers
@@ -257,6 +258,7 @@ const renderAllProducts = async () => {
   DESSERT_CONTAINER.innerHTML = "";
   DESSERT_SECTION.style.display = "none";
   CART_SECTION.style.display = "none";
+  ATTRIBUTION.style.display = "none";
 
   await new Promise((resolve) => setTimeout(resolve, 2000));
   try {
@@ -269,6 +271,7 @@ const renderAllProducts = async () => {
     LOADER.style.display = "none";
     DESSERT_SECTION.style.display = "block";
     CART_SECTION.style.display = "block";
+    ATTRIBUTION.style.display = "block";
 
     productsData.forEach((element, index) => {
       const clone = template.content.cloneNode(true);
