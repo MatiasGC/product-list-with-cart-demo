@@ -18,8 +18,7 @@ Users can:
 
 ## Links
 
-- [Live Site URL](https://your-live-site-url.com)
-- [Frontend Mentor Solution](https://your-solution-url.com)
+- [Live Site URL](https://matiasgc.github.io/product-list-with-cart-demo/)
 
 ## Built with
 
